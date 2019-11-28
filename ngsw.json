@@ -1,20 +1,20 @@
 {
   "configVersion": 1,
-  "timestamp": 1574961325335,
-  "index": "/math-boxes/index.html",
+  "timestamp": 1574961500372,
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/math-boxes/es2015-polyfills.e17997aea7f522b8d49d.js",
-        "/math-boxes/favicon.ico",
-        "/math-boxes/index.html",
-        "/math-boxes/main.104e6915fbe1eeb4d4c4.js",
-        "/math-boxes/polyfills.8bbb231b43165d65d357.js",
-        "/math-boxes/runtime.26209474bfa8dc87a77c.js",
-        "/math-boxes/styles.6dd3f8295156cab7d5e2.css"
+        "/es2015-polyfills.e17997aea7f522b8d49d.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.a89ae369471b8c943287.js",
+        "/polyfills.8bbb231b43165d65d357.js",
+        "/runtime.26209474bfa8dc87a77c.js",
+        "/styles.6dd3f8295156cab7d5e2.css"
       ],
       "patterns": []
     },
@@ -23,35 +23,35 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/math-boxes/assets/icons/icon-128x128.png",
-        "/math-boxes/assets/icons/icon-144x144.png",
-        "/math-boxes/assets/icons/icon-152x152.png",
-        "/math-boxes/assets/icons/icon-192x192.png",
-        "/math-boxes/assets/icons/icon-384x384.png",
-        "/math-boxes/assets/icons/icon-512x512.png",
-        "/math-boxes/assets/icons/icon-72x72.png",
-        "/math-boxes/assets/icons/icon-96x96.png"
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/math-boxes/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/math-boxes/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/math-boxes/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/math-boxes/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/math-boxes/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/math-boxes/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/math-boxes/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/math-boxes/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/math-boxes/es2015-polyfills.e17997aea7f522b8d49d.js": "9fa6f81adfc34dc84f2850c9fc9713766c376c09",
-    "/math-boxes/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/math-boxes/index.html": "1c53acc21e671b3d16c53d8b746a2eefec8d3ca5",
-    "/math-boxes/main.104e6915fbe1eeb4d4c4.js": "ae7156c4890a872889bc3a49f380ab5dba5ad7c6",
-    "/math-boxes/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
-    "/math-boxes/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/math-boxes/styles.6dd3f8295156cab7d5e2.css": "d40e26fc40da6c3efa3c6cf17b35d3384b952ecd"
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/es2015-polyfills.e17997aea7f522b8d49d.js": "9fa6f81adfc34dc84f2850c9fc9713766c376c09",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "4e625959d6d928cfcb1b9bb84f4786975bca1687",
+    "/main.a89ae369471b8c943287.js": "14029530098a5262293222fbd7378bddbc6dc4ef",
+    "/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
+    "/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.6dd3f8295156cab7d5e2.css": "d40e26fc40da6c3efa3c6cf17b35d3384b952ecd"
   },
   "navigationUrls": [
     {
