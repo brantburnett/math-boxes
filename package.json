@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/math-boxes/"
+    "deploy": "ng deploy --base-href=/math-boxes/ --repo=https://github.com/brantburnett/math-boxes.git --name=\"Brant Burnett\" --email=bburnett@centeredgesoftware.com"
   },
   "private": true,
   "dependencies": {
