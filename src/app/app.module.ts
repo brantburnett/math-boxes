@@ -18,6 +18,8 @@ import { EmojiSelectorComponent } from './emoji-selector/emoji-selector.componen
 import { MultiplicationComponent } from './multiplication/multiplication.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PyroComponent } from './pyro/pyro.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { PyroComponent } from './pyro/pyro.component';
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
