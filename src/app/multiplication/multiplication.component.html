@@ -1,0 +1,28 @@
+<div class="math-problem">
+  <h2>Multiplication</h2>
+
+  <div class="problem-text">
+    {{ operand1 }} × {{ operand2 }} =
+
+    <mat-form-field class="problem-answer">
+      <input #answer matInput value="" placeholder="answer here" />
+    </mat-form-field>
+  </div>
+
+  <app-emoji-selector
+    [currentValue]="currentEmoji"
+    (currentValueChange)="onEmojiChange($event)">
+  </app-emoji-selector>
+  <app-decimal-grid-set #grid
+    [count]="2"
+    [currentValue]="currentEmoji"
+  ></app-decimal-grid-set>
+
+  <p class="buttons">
+    <button (click)="check()" mat-raised-button color="primary">Check My Answer!</button>
+    <button (click)="grid.clear()" mat-raised-button color="primary">Clear</button>
+  </p>
+
+</div>
+
+<app-pyro *ngIf="pyroVisible"></app-pyro>

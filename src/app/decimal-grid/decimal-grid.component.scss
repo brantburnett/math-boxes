@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+@mixin mix-app-theme($app-theme) {
+  $primary: map-get($app-theme, primary);
+  $accent: map-get($app-theme, accent);
+
+  .decimal-grid td {
+    border: 1px solid mat-color($primary);
+  }
+}
+
+// Include the mixin
+@include mix-app-theme($app-theme);
+
+.decimal-grid {
+  border-collapse: collapse;
+}
+
+.decimal-grid td {
+  font-size: 1.8rem;
+  width: 1.6em;
+  height: 1.6em;
+  padding: 0.2em;
+
+  text-align: center;
+  vertical-align: middle;
+
+  cursor: pointer;
+  user-select: none;
+}
