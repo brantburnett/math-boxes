@@ -5,7 +5,7 @@ export class ProblemTypeComponent {
   currentEmoji = '😁';
   pyroVisible = false;
 
-  @ViewChild('decimalGridSet') decimalGridSet: DecimalGridSetComponent;
+  @ViewChild('decimalGridSet', { static: false }) decimalGridSet: DecimalGridSetComponent;
 
   onEmojiChange(value: string) {
     this.currentEmoji = value;

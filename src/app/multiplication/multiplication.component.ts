@@ -12,8 +12,8 @@ export class MultiplicationComponent extends ProblemTypeComponent implements OnI
   operand1: number;
   operand2: number;
 
-  @ViewChild('answer') answer: ElementRef<HTMLInputElement>;
-  @ViewChild('grid') grid: DecimalGridSetComponent;
+  @ViewChild('answer', { static: true }) answer: ElementRef<HTMLInputElement>;
+  @ViewChild('grid', { static: true }) grid: DecimalGridSetComponent;
 
   constructor() { super(); }
 
