@@ -4,8 +4,8 @@
   "theme_color": "#7b1fa2",
   "background_color": "#303030",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/math-boxes",
+  "start_url": "/math-boxes",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
