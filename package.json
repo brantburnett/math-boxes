@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "ng build --prod --base-href 'math-boxes' --output-path dist && ngh --dir=dist"
+    "deploy": "ng deploy --base-href=/math-boxes/"
   },
   "private": true,
   "dependencies": {
