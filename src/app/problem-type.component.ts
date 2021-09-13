@@ -1,11 +1,12 @@
-import { ViewChild } from '@angular/core';
+import { ViewChild, Directive } from '@angular/core';
 import { DecimalGridSetComponent } from './decimal-grid-set/decimal-grid-set.component';
 
+@Directive()
 export class ProblemTypeComponent {
   currentEmoji = '😁';
   pyroVisible = false;
 
-  @ViewChild('decimalGridSet', { static: false }) decimalGridSet: DecimalGridSetComponent;
+  @ViewChild('decimalGridSet') decimalGridSet: DecimalGridSetComponent;
 
   onEmojiChange(value: string) {
     this.currentEmoji = value;

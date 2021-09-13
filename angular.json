@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/math-boxes",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -56,6 +57,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ],
               "serviceWorker": true,
@@ -146,5 +151,8 @@
       }
     }
   },
-  "defaultProject": "math-boxes"
+  "defaultProject": "math-boxes",
+  "cli": {
+    "analytics": "e65f0cc7-cd90-4acc-9595-849eb5ee7b23"
+  }
 }
