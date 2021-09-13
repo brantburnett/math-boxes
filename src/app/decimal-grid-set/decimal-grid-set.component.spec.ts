@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DecimalGridSetComponent } from './decimal-grid-set.component';
 
@@ -6,7 +6,7 @@ describe('DecimalGridSetComponent', () => {
   let component: DecimalGridSetComponent;
   let fixture: ComponentFixture<DecimalGridSetComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DecimalGridSetComponent ]
     })
