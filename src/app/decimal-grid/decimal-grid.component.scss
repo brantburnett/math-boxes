@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import '../../styles.scss';
 
 @mixin mix-app-theme($app-theme) {
@@ -5,7 +6,7 @@
   $accent: map-get($app-theme, accent);
 
   .decimal-grid td {
-    border: 1px solid mat-color($primary);
+    border: 1px solid mat.get-color-from-palette($primary);
   }
 }
 
