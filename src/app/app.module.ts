@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PyroComponent } from './pyro/pyro.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MultiplicationFactsComponent } from './multiplication-facts/multiplication-facts.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { environment } from '../environments/environment';
     DecimalGridSetComponent,
     EmojiSelectorComponent,
     MultiplicationComponent,
-    PyroComponent
+    PyroComponent,
+    MultiplicationFactsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatButtonToggleModule,
     MatIconModule,

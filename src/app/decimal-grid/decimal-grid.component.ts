@@ -8,8 +8,9 @@ import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 export class DecimalGridComponent implements OnInit {
 
   @Input() values: string[] = [];
+  @Input() highlightIndex: number | null = null;
 
-  @Output() click = new EventEmitter<number>();
+  @Output() indexClick = new EventEmitter<number>();
 
   constructor() { }
 
@@ -17,7 +18,7 @@ export class DecimalGridComponent implements OnInit {
   }
 
   onClick(index: number) {
-    this.click.emit(index);
+    this.indexClick.emit(index);
   }
 
 }

@@ -1,0 +1,24 @@
+<div class="math-problem">
+  <h2>Multiplication Facts</h2>
+
+  <p>Presents multiplication facts and their answers quickly. Try to get the right answer before it appears!</p>
+
+  <h3>Select a Factor:</h3>
+  <app-decimal-grid [values]="firstFactorValues" [highlightIndex]="crazyFactors ? 9 : factor1 - 1" (indexClick)="firstFactorSelected($event)"></app-decimal-grid>
+
+  <div class="settings">
+    Speed:
+
+    <mat-form-field>
+      <input [(ngModel)]="speed" matInput type="number" min="1" max="10" [disabled]="running" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="toggleRunning()">{{ running ? 'Stop' : 'Run' }}</button>
+  </div>
+
+  <div class="problem-text" *ngIf="running">
+    {{ factor1 }} × {{ factor2 }} =
+
+    <span *ngIf="productVisible" class="answer">{{ product }}</span>
+  </div>
+</div>

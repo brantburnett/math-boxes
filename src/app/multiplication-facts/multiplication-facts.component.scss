@@ -1,0 +1,26 @@
+@use '~@angular/material' as mat;
+@import '../../styles.scss';
+
+.settings {
+  display: inline-block;
+
+  font-size: 1.8rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+
+  border: 1px solid mat.get-color-from-palette($app-accent);
+}
+
+.problem-text {
+  font-size: 2.4rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.answer {
+  text-decoration: underline;
+}

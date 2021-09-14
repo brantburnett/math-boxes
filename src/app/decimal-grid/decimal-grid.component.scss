@@ -7,6 +7,10 @@
 
   .decimal-grid td {
     border: 1px solid mat.get-color-from-palette($primary);
+
+    &.highlight {
+      background-color: mat.get-color-from-palette($accent);
+    }
   }
 }
 
