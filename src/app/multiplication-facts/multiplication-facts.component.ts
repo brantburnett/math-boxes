@@ -1,23 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription, timer } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, combineLatest, distinctUntilChanged, filter, mapTo, of, Subject, Subscription, switchMap, takeUntil, timer } from 'rxjs';
 
 @Component({
   selector: 'app-multiplication-facts',
   templateUrl: './multiplication-facts.component.html',
   styleUrls: ['./multiplication-facts.component.scss']
 })
-export class MultiplicationFactsComponent {
-  firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '🤪']
+export class MultiplicationFactsComponent implements OnInit, OnDestroy {
+  firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+  //'🤪' for crazy factors later
 
-  running = false;
-  speed = 8;
+  running = new BehaviorSubject<boolean>(false);
+  speed = new BehaviorSubject<number>(8);
 
   factor1 = 1;
   factor2 = 1;
-  crazyFactors = false;
+  crazyFactors = false; // implement later
   productVisible = false;
 
-  timerSubscription: Subscription = null;
+  disposed = new Subject<void>();
 
   get product() {
     return this.factor1 * this.factor2;
@@ -25,40 +26,52 @@ export class MultiplicationFactsComponent {
 
   constructor() { }
 
+  ngOnInit() {
+    combineLatest([
+      this.speed,
+      this.running
+    ]).pipe(
+      switchMap(([speed, running]) => {
+        const delay = (11 - speed) * 1000;
+
+        return running
+          ? timer(delay, delay).pipe(
+            mapTo(running)
+          )
+          : of(false);
+      }),
+      takeUntil(this.disposed),
+      filter(running => running)
+    ).subscribe(() => {
+      if (this.productVisible) {
+        this.chooseFactors();
+      }
+
+      this.productVisible = !this.productVisible;
+    });
+
+    this.running.pipe(
+      distinctUntilChanged(),
+      takeUntil(this.disposed)
+    ).subscribe(running => {
+      if (running) {
+        // Reset on start
+        this.productVisible = false;
+        this.chooseFactors();
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.disposed.next();
+  }
+
   firstFactorSelected(factorIndex: number): void {
-    if (factorIndex < 9) {
-      this.factor1 = factorIndex + 1;
-      this.crazyFactors = false;
-    } else {
-      this.crazyFactors = true;
-    }
+    this.factor1 = factorIndex + 1;
   }
 
   toggleRunning(): void {
-    if (this.running) {
-      this.running = false;
-
-      if (this.timerSubscription) {
-        this.timerSubscription.unsubscribe();
-        this.timerSubscription = null;
-      }
-
-      return;
-    }
-
-    this.running = true;
-    this.productVisible = false;
-    this.chooseFactors();
-
-    const delay = (11 - this.speed) * 1000;
-    this.timerSubscription = timer(delay, delay)
-      .subscribe(() => {
-        if (this.productVisible) {
-          this.chooseFactors();
-        }
-
-        this.productVisible = !this.productVisible;
-      });
+    this.running.next(!this.running.value);
   }
 
   chooseFactors(): void {

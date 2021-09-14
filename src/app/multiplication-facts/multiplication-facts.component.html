@@ -1,22 +1,24 @@
 <div class="math-problem">
   <h2>Multiplication Facts</h2>
 
-  <p>Presents multiplication facts and their answers quickly. Try to get the right answer before it appears!</p>
-
-  <h3>Select a Factor:</h3>
-  <app-decimal-grid [values]="firstFactorValues" [highlightIndex]="crazyFactors ? 9 : factor1 - 1" (indexClick)="firstFactorSelected($event)"></app-decimal-grid>
+  <p>
+    Presents multiplication facts and their answers quickly. Try to get the right answer before it appears!
+  </p>
 
   <div class="settings">
-    Speed:
-
+    <div class="factor">
+      <h3>Select a Factor:</h3>
+      <app-decimal-grid [values]="firstFactorValues" [highlightIndex]="crazyFactors ? 9 : factor1 - 1" (indexClick)="firstFactorSelected($event)"></app-decimal-grid>
+    </div>
     <mat-form-field>
-      <input [(ngModel)]="speed" matInput type="number" min="1" max="10" [disabled]="running" />
+      <mat-label>Speed (1-10)</mat-label>
+      <input [ngModel]="speed | async" matInput type="number" min="1" max="10" [disabled]="running | async" (ngModelChange)="speed.next($event)" />
+      <button matSuffix mat-raised-button color="primary" (click)="toggleRunning()">{{ (running | async) ? 'Stop' : 'Start' }}</button>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" (click)="toggleRunning()">{{ running ? 'Stop' : 'Run' }}</button>
   </div>
 
-  <div class="problem-text" *ngIf="running">
+  <div class="problem-text" *ngIf="running | async">
     {{ factor1 }} × {{ factor2 }} =
 
     <span *ngIf="productVisible" class="answer">{{ product }}</span>
