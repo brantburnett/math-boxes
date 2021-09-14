@@ -6,7 +6,7 @@ import { Observable, Subscription, timer } from 'rxjs';
   templateUrl: './multiplication-facts.component.html',
   styleUrls: ['./multiplication-facts.component.scss']
 })
-export class MultiplicationFactsComponent implements OnInit {
+export class MultiplicationFactsComponent {
   firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '🤪']
 
   running = false;
@@ -24,9 +24,6 @@ export class MultiplicationFactsComponent implements OnInit {
   }
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   firstFactorSelected(factorIndex: number): void {
     if (factorIndex < 9) {

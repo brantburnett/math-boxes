@@ -5,7 +5,7 @@ import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
   templateUrl: './decimal-grid.component.html',
   styleUrls: ['./decimal-grid.component.scss']
 })
-export class DecimalGridComponent implements OnInit {
+export class DecimalGridComponent {
 
   @Input() values: string[] = [];
   @Input() highlightIndex: number | null = null;
@@ -13,9 +13,6 @@ export class DecimalGridComponent implements OnInit {
   @Output() indexClick = new EventEmitter<number>();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   onClick(index: number) {
     this.indexClick.emit(index);

@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pyro.component.html',
   styleUrls: ['./pyro.component.scss']
 })
-export class PyroComponent implements OnInit {
+export class PyroComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

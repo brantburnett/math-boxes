@@ -5,7 +5,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   templateUrl: './emoji-selector.component.html',
   styleUrls: ['./emoji-selector.component.scss']
 })
-export class EmojiSelectorComponent implements OnInit {
+export class EmojiSelectorComponent {
   options = [
     '😁',
     '👻',
@@ -28,8 +28,5 @@ export class EmojiSelectorComponent implements OnInit {
   @Output() currentValueChange = new EventEmitter<string>();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
