@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { EmojiSelectorComponent } from './emoji-selector.component';
 
@@ -8,7 +10,8 @@ describe('EmojiSelectorComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmojiSelectorComponent ]
+      declarations: [ EmojiSelectorComponent ],
+      imports: [ MatButtonModule, MatButtonToggleModule ]
     })
     .compileComponents();
   }));
