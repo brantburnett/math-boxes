@@ -1,5 +1,5 @@
 @use '~@angular/material' as mat;
-@import '../../styles.scss';
+@import '../../_variables';
 
 @mixin mix-app-theme($app-theme) {
   $primary: map-get($app-theme, primary);
