@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { MultiplicationFactsComponent } from './multiplication-facts/multiplication-facts.component';
 import { FormsModule } from '@angular/forms';
 import { APP_BASE_HREF } from '@angular/common';
+import { ThreeDigitSubtractionComponent } from './three-digit-subtraction/three-digit-subtraction.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { APP_BASE_HREF } from '@angular/common';
     EmojiSelectorComponent,
     MultiplicationComponent,
     PyroComponent,
-    MultiplicationFactsComponent
+    MultiplicationFactsComponent,
+    ThreeDigitSubtractionComponent
   ],
   imports: [
     BrowserModule,
