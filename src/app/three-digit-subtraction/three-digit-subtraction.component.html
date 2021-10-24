@@ -1,0 +1,21 @@
+<div class="math-problem">
+  <h2>Three Digit Subtraction</h2>
+
+  <div class="problem-text">
+    <div class="operand-line"><span class="operand operand1">{{ operand1 }}</span></div>
+    <div class="operand-line"><span class="operator">-</span><span class="operand operand2">{{ operand2 }}</span></div>
+
+    <mat-form-field class="problem-answer">
+      <input #answer matInput type="number" value="" placeholder="answer here" min="0" />
+    </mat-form-field>
+  </div>
+
+  <p class="buttons">
+    <button (click)="check()" mat-raised-button color="primary">Check My Answer!</button>
+    <button (click)="randomProblem()" mat-raised-button color="secondary">Too hard, new problem</button>
+    <span *ngIf="isWrong | async">{{ wrongMessage | async }}</span>
+  </p>
+
+</div>
+
+<app-pyro *ngIf="pyroVisible"></app-pyro>

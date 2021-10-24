@@ -1,0 +1,41 @@
+@use '~@angular/material' as mat;
+@import '../../_variables';
+
+.problem-text {
+  display: inline-block;
+
+  font-size: 1.8rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-right: 2rem;
+
+  border: 1px solid mat.get-color-from-palette($app-accent);
+}
+
+.operand {
+  display: inline-block;
+  width: 4rem;
+  text-align: right;
+}
+
+.operand1 {
+  margin-left: 1rem;
+}
+
+.operand2 {
+  border-bottom: 1px solid;
+}
+
+.operator {
+  display: inline-block;
+  width: 1rem;
+  text-align: left;
+}
+
+.problem-answer {
+  margin-top: 2em;
+}
+
+.buttons button {
+  margin-right: 1rem;
+}
