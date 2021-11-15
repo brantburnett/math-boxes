@@ -8,7 +8,8 @@
   <div class="settings">
     <div class="factor">
       <h3>Select a Factor:</h3>
-      <app-decimal-grid [values]="firstFactorValues" [highlightIndex]="crazyFactors ? 9 : factor1 - 1" (indexClick)="firstFactorSelected($event)"></app-decimal-grid>
+      <p><mat-slide-toggle [(ngModel)]="mixAndMatch"></mat-slide-toggle> Mix &amp; Match 🤪</p>
+      <app-decimal-grid [values]="firstFactorValues" [highlightIndices]="getHighlightIndices()" (indexClick)="factorSelected($event)"></app-decimal-grid>
     </div>
     <mat-form-field>
       <mat-label>Speed (1-10)</mat-label>

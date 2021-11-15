@@ -8,14 +8,14 @@ import { BehaviorSubject, combineLatest, distinctUntilChanged, filter, mapTo, of
 })
 export class MultiplicationFactsComponent implements OnInit, OnDestroy {
   firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-  //'🤪' for crazy factors later
 
   running = new BehaviorSubject<boolean>(false);
   speed = new BehaviorSubject<number>(8);
+  mixAndMatch = false;
 
+  factors = [1];
   factor1 = 1;
   factor2 = 1;
-  crazyFactors = false; // implement later
   productVisible = false;
 
   disposed = new Subject<void>();
@@ -66,8 +66,22 @@ export class MultiplicationFactsComponent implements OnInit, OnDestroy {
     this.disposed.next();
   }
 
-  firstFactorSelected(factorIndex: number): void {
-    this.factor1 = factorIndex + 1;
+  factorSelected(factorIndex: number): void {
+    const factor = parseInt(this.firstFactorValues[factorIndex]);
+
+    if (this.mixAndMatch) {
+      if (this.factors.includes(factor)) {
+        this.factors = this.factors.filter(p => p !== factor);
+      } else {
+        this.factors.push(factor);
+      }
+    } else {
+      this.factors = [factor];
+    }
+  }
+
+  getHighlightIndices() {
+    return this.factors.map(p => this.firstFactorValues.indexOf(p.toFixed(0)));
   }
 
   toggleRunning(): void {
@@ -75,15 +89,13 @@ export class MultiplicationFactsComponent implements OnInit, OnDestroy {
   }
 
   chooseFactors(): void {
+    this.factor1 = this.factors[Math.floor(Math.random() * this.factors.length)];
+
     let newFactor = 0;
     do {
-      newFactor = Math.floor(Math.random() * 9) + 1;
+      newFactor = Math.floor(Math.random() * 10);
     } while (newFactor === this.factor2);
 
     this.factor2 = newFactor;
-
-    if (this.crazyFactors) {
-      this.factor1 = Math.floor(Math.random() * 9) + 1
-    }
   }
 }
