@@ -16,7 +16,7 @@ export class UpdateService implements OnDestroy {
     if (this.updates.isEnabled) {
       this.updateSubscription = interval(6 * 60 * 60).subscribe(() => this.updates.checkForUpdate());
 
-      this.availableSubscription = this.updates.available.subscribe(() => {
+      this.availableSubscription = this.updates.versionUpdates.subscribe(() => {
         this.updates.activateUpdate().then(() => document.location.reload());
       });
     }
