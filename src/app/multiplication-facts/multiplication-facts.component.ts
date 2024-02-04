@@ -7,7 +7,7 @@ import { BehaviorSubject, combineLatest, distinctUntilChanged, filter, mapTo, of
   styleUrls: ['./multiplication-facts.component.scss']
 })
 export class MultiplicationFactsComponent implements OnInit, OnDestroy {
-  firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+  firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 
   running = new BehaviorSubject<boolean>(false);
   speed = new BehaviorSubject<number>(8);
@@ -93,7 +93,7 @@ export class MultiplicationFactsComponent implements OnInit, OnDestroy {
 
     let newFactor = 0;
     do {
-      newFactor = Math.floor(Math.random() * 10);
+      newFactor = Math.floor(Math.random() * 12);
     } while (newFactor === this.factor2);
 
     this.factor2 = newFactor;
