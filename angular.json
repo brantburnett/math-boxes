@@ -138,9 +138,10 @@
       }
     }
   },
-  "defaultProject": "math-boxes",
   "cli": {
     "analytics": "e65f0cc7-cd90-4acc-9595-849eb5ee7b23",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
