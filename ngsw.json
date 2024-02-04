@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1675517463711,
+  "timestamp": 1707076407641,
   "index": "/math-boxes/index.html",
   "assetGroups": [
     {
@@ -13,8 +13,8 @@
       "urls": [
         "/math-boxes/favicon.ico",
         "/math-boxes/index.html",
-        "/math-boxes/main-es2016.0da558430208c489ce49.js",
-        "/math-boxes/main-es5.0da558430208c489ce49.js",
+        "/math-boxes/main-es2016.1ee89379cb3edfea46a8.js",
+        "/math-boxes/main-es5.1ee89379cb3edfea46a8.js",
         "/math-boxes/manifest.webmanifest",
         "/math-boxes/polyfills-es2016.d05f6f5d9653d65479e3.js",
         "/math-boxes/polyfills-es5.84d63df995440f423584.js",
@@ -55,9 +55,9 @@
     "/math-boxes/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/math-boxes/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/math-boxes/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/math-boxes/index.html": "764ac2a1a4d2a957eba0b6dc87b2a4f3eefa3749",
-    "/math-boxes/main-es2016.0da558430208c489ce49.js": "dc37552d1e36c4961ddf6013fd4e61c68207c955",
-    "/math-boxes/main-es5.0da558430208c489ce49.js": "7ad8aa93c9723a25bc9fe274a240170284d14464",
+    "/math-boxes/index.html": "b8f5b3bbf793511e5021207cf3ded84f93184c44",
+    "/math-boxes/main-es2016.1ee89379cb3edfea46a8.js": "660c7024ff94eb3ad750962e736bffa95203a157",
+    "/math-boxes/main-es5.1ee89379cb3edfea46a8.js": "2bdebea45c98c2df0b11edc1103fce3c91627a0c",
     "/math-boxes/manifest.webmanifest": "c77643e3ce01d3cfd82a7cbef9d3cafc0c30d10f",
     "/math-boxes/polyfills-es2016.d05f6f5d9653d65479e3.js": "fb80ab1e9c07763da54cd2cf63f2c7e0cadd150a",
     "/math-boxes/polyfills-es5.84d63df995440f423584.js": "c80fb608d14eb524f6a2279b5b2a3a3f3b92990c",
