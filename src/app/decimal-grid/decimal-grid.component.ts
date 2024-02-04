@@ -29,4 +29,21 @@ export class DecimalGridComponent {
     return this.highlightIndices.includes(index);
   }
 
+  *firstHalf() {
+    const halfSize = this.getHalfSize();
+    for (let i=0; i<halfSize; i++) {
+      yield i;
+    }
+  }
+
+  *secondHalf() {
+    const halfSize = this.getHalfSize();
+    for (let i=0; i<halfSize; i++) {
+      yield i+halfSize;
+    }
+  }
+
+  private getHalfSize() {
+    return Math.max(5, Math.ceil(this.values.length / 2)); // At least 5 per half
+  }
 }
