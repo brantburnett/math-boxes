@@ -4,13 +4,11 @@
 @mixin mix-app-theme($app-theme) {
   $primary: map-get($app-theme, primary);
   $accent: map-get($app-theme, accent);
-
-  .mat-button-toggle {
+  .mat-button-toggle-appearance-standard.mat-button-toggle {
     background-color: mat.get-color-from-palette($primary);
     color: mat.get-color-from-palette($primary, default-contrast);
   }
-
-  .mat-button-toggle-checked {
+  .mat-button-toggle-appearance-standard.mat-button-toggle-checked {
     background-color: mat.get-color-from-palette($accent);
     color: mat.get-color-from-palette($accent, default-contrast);
   }
