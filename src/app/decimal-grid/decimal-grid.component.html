@@ -1,8 +1,8 @@
 <table class="decimal-grid">
   <tr>
-    <td *ngFor="let index of firstHalf()" (click)="onClick(index)" [class.highlight]="isHighlighted(index)">{{ values[index] || '&nbsp;' }}</td>
+    <td *ngFor="let index of firstHalfIndices" (click)="onClick(index)" [class.highlight]="isHighlighted(index)">{{ values[index] || '&nbsp;' }}</td>
   </tr>
   <tr>
-    <td *ngFor="let index of secondHalf()" (click)="onClick(index)" [class.highlight]="isHighlighted(index)">{{ values[index] || '&nbsp;' }}</td>
+    <td *ngFor="let index of secondHalfIndices" (click)="onClick(index)" [class.highlight]="isHighlighted(index)">{{ values[index] || '&nbsp;' }}</td>
   </tr>
 </table>
