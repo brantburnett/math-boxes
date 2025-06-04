@@ -5,12 +5,12 @@
   $primary: map-get($app-theme, primary);
   $accent: map-get($app-theme, accent);
   .mat-button-toggle-appearance-standard.mat-button-toggle {
-    background-color: mat.get-color-from-palette($primary);
-    color: mat.get-color-from-palette($primary, default-contrast);
+    background-color: mat.m2-get-color-from-palette($primary);
+    color: mat.m2-get-color-from-palette($primary, default-contrast);
   }
   .mat-button-toggle-appearance-standard.mat-button-toggle-checked {
-    background-color: mat.get-color-from-palette($accent);
-    color: mat.get-color-from-palette($accent, default-contrast);
+    background-color: mat.m2-get-color-from-palette($accent);
+    color: mat.m2-get-color-from-palette($accent, default-contrast);
   }
 }
 

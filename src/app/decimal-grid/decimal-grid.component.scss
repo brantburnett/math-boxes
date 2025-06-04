@@ -6,10 +6,10 @@
   $accent: map-get($app-theme, accent);
 
   .decimal-grid td {
-    border: 1px solid mat.get-color-from-palette($primary);
+    border: 1px solid mat.m2-get-color-from-palette($primary);
 
     &.highlight {
-      background-color: mat.get-color-from-palette($accent);
+      background-color: mat.m2-get-color-from-palette($accent);
     }
   }
 }
