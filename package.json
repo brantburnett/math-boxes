@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "start:pwa": "ng build --configuration production && http-server --proxy http://localhost:8080? -p 8080 -c-1 -o math-boxes dist",
     "build": "ng build",
     "test": "jest",

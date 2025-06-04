@@ -1,5 +1,5 @@
 
-FROM mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
+FROM mcr.microsoft.com/devcontainers/typescript-node:1-22-bullseye
 
 # For Cypress support
 RUN apt-get update && \
