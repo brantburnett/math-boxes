@@ -14,16 +14,19 @@
     <mat-form-field>
       <mat-label>Speed (1-10)</mat-label>
       <input [ngModel]="speed | async" matInput type="number" min="1" max="10" [disabled]="running | async" (ngModelChange)="speed.next($event)" />
-      
+
     </mat-form-field>
 
     <button matSuffix mat-raised-button color="primary" class="start-button" (click)="toggleRunning()">{{ (running | async) ? 'Stop' : 'Start' }}</button>
 
   </div>
 
-  <div class="problem-text" *ngIf="running | async">
-    {{ factor1 }} × {{ factor2 }} =
-
-    <span *ngIf="productVisible" class="answer">{{ product }}</span>
-  </div>
+  @if (running | async) {
+    <div class="problem-text">
+      {{ factor1 }} × {{ factor2 }} =
+      @if (productVisible) {
+        <span class="answer">{{ product }}</span>
+      }
+    </div>
+  }
 </div>

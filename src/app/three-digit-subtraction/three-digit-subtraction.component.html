@@ -13,9 +13,13 @@
   <p class="buttons">
     <button (click)="check()" mat-raised-button color="primary">Check My Answer!</button>
     <button (click)="randomProblem()" mat-raised-button color="secondary">Too hard, new problem</button>
-    <span *ngIf="isWrong | async">{{ wrongMessage | async }}</span>
+    @if (isWrong | async) {
+      <span>{{ wrongMessage | async }}</span>
+    }
   </p>
 
 </div>
 
-<app-pyro *ngIf="pyroVisible"></app-pyro>
+@if (pyroVisible) {
+  <app-pyro></app-pyro>
+}

@@ -25,4 +25,6 @@
 
 </div>
 
-<app-pyro *ngIf="pyroVisible"></app-pyro>
+@if (pyroVisible) {
+  <app-pyro></app-pyro>
+}

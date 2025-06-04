@@ -1,9 +1,11 @@
 <div class="decimal-grid-set">
-  <div class="decimal-grid"
-    *ngFor="let index of indexes">
-    <app-decimal-grid
-      [values]="values.slice(index * 10, (index + 1) * 10)"
-      (indexClick)="this.onClick($event + index * 10)"
-    ></app-decimal-grid>
-  </div>
+  @for (index of indexes; track index) {
+    <div class="decimal-grid"
+      >
+      <app-decimal-grid
+        [values]="values.slice(index * 10, (index + 1) * 10)"
+        (indexClick)="this.onClick($event + index * 10)"
+      ></app-decimal-grid>
+    </div>
+  }
 </div>

@@ -3,9 +3,11 @@
 </p>
 
 <mat-button-toggle-group class="emojis"
-                         [value]="currentValue"
-                         (valueChange)="currentValueChange.emit($event)">
-  <mat-button-toggle *ngFor="let emoji of options" [value]="emoji">
-    {{ emoji }}
-  </mat-button-toggle>
+  [value]="currentValue"
+  (valueChange)="currentValueChange.emit($event)">
+  @for (emoji of options; track emoji) {
+    <mat-button-toggle [value]="emoji">
+      {{ emoji }}
+    </mat-button-toggle>
+  }
 </mat-button-toggle-group>
