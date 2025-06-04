@@ -3,9 +3,10 @@ import { ProblemTypeComponent } from '../problem-type.component';
 import { DecimalGridSetComponent } from '../decimal-grid-set/decimal-grid-set.component';
 
 @Component({
-  selector: 'app-multiplication',
-  templateUrl: './multiplication.component.html',
-  styleUrls: ['./multiplication.component.scss']
+    selector: 'app-multiplication',
+    templateUrl: './multiplication.component.html',
+    styleUrls: ['./multiplication.component.scss'],
+    standalone: false
 })
 export class MultiplicationComponent extends ProblemTypeComponent implements OnInit {
 

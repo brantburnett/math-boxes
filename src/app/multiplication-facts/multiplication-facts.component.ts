@@ -2,9 +2,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BehaviorSubject, combineLatest, distinctUntilChanged, filter, mapTo, of, Subject, Subscription, switchMap, takeUntil, timer } from 'rxjs';
 
 @Component({
-  selector: 'app-multiplication-facts',
-  templateUrl: './multiplication-facts.component.html',
-  styleUrls: ['./multiplication-facts.component.scss']
+    selector: 'app-multiplication-facts',
+    templateUrl: './multiplication-facts.component.html',
+    styleUrls: ['./multiplication-facts.component.scss'],
+    standalone: false
 })
 export class MultiplicationFactsComponent implements OnInit, OnDestroy {
   firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']

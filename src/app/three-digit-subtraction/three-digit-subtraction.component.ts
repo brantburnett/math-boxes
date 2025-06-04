@@ -4,9 +4,10 @@ import { randomInteger } from '../helpers/random';
 import { BehaviorSubject, delay, delayWhen, interval, map, Observable, of, startWith, switchMap } from 'rxjs';
 
 @Component({
-  selector: 'app-three-digit-subtraction',
-  templateUrl: './three-digit-subtraction.component.html',
-  styleUrls: ['./three-digit-subtraction.component.scss']
+    selector: 'app-three-digit-subtraction',
+    templateUrl: './three-digit-subtraction.component.html',
+    styleUrls: ['./three-digit-subtraction.component.scss'],
+    standalone: false
 })
 export class ThreeDigitSubtractionComponent extends ProblemTypeComponent implements OnInit {
 

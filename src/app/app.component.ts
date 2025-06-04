@@ -3,10 +3,11 @@ import { ChangeDetectorRef, Component, ViewEncapsulation, OnDestroy } from '@ang
 import { UpdateService } from './update-service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class AppComponent implements OnDestroy {
   mobileQuery: MediaQueryList;

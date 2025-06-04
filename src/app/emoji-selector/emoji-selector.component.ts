@@ -1,9 +1,10 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-emoji-selector',
-  templateUrl: './emoji-selector.component.html',
-  styleUrls: ['./emoji-selector.component.scss']
+    selector: 'app-emoji-selector',
+    templateUrl: './emoji-selector.component.html',
+    styleUrls: ['./emoji-selector.component.scss'],
+    standalone: false
 })
 export class EmojiSelectorComponent {
   options = [
