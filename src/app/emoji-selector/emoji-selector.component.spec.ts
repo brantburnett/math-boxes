@@ -10,8 +10,7 @@ describe('EmojiSelectorComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmojiSelectorComponent ],
-      imports: [ MatButtonModule, MatButtonToggleModule ]
+      imports: [ EmojiSelectorComponent, MatButtonModule, MatButtonToggleModule ]
     })
     .compileComponents();
   }));

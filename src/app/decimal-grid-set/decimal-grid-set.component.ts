@@ -1,10 +1,11 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { DecimalGridComponent } from '../decimal-grid/decimal-grid.component';
 
 @Component({
     selector: 'app-decimal-grid-set',
     templateUrl: './decimal-grid-set.component.html',
     styleUrls: ['./decimal-grid-set.component.scss'],
-    standalone: false
+    imports: [DecimalGridComponent]
 })
 export class DecimalGridSetComponent implements OnChanges {
 

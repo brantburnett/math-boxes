@@ -3,8 +3,7 @@ import { Component, EventEmitter, OnInit, Input, Output, OnChanges, SimpleChange
 @Component({
     selector: 'app-decimal-grid',
     templateUrl: './decimal-grid.component.html',
-    styleUrls: ['./decimal-grid.component.scss'],
-    standalone: false
+    styleUrls: ['./decimal-grid.component.scss']
 })
 export class DecimalGridComponent implements OnChanges {
 

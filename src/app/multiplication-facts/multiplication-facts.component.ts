@@ -1,11 +1,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BehaviorSubject, combineLatest, distinctUntilChanged, filter, mapTo, of, Subject, Subscription, switchMap, takeUntil, timer } from 'rxjs';
+import { MatSlideToggle } from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
+import { DecimalGridComponent } from '../decimal-grid/decimal-grid.component';
+import { MatFormField, MatLabel, MatInput, MatSuffix } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-multiplication-facts',
     templateUrl: './multiplication-facts.component.html',
     styleUrls: ['./multiplication-facts.component.scss'],
-    standalone: false
+    imports: [MatSlideToggle, FormsModule, DecimalGridComponent, MatFormField, MatLabel, MatInput, MatButton, MatSuffix, AsyncPipe]
 })
 export class MultiplicationFactsComponent implements OnInit, OnDestroy {
   firstFactorValues = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']

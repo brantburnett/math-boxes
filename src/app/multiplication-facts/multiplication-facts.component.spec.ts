@@ -15,8 +15,9 @@ describe('MultiplicationFactsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MultiplicationFactsComponent, DecimalGridComponent ],
       imports: [
+        MultiplicationFactsComponent,
+        DecimalGridComponent,
         NoopAnimationsModule,
         FormsModule,
         MatButtonModule,

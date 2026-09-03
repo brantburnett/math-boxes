@@ -17,15 +17,13 @@ describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
+        AppComponent,
         NoopAnimationsModule,
         RouterTestingModule,
         MatIconModule,
         MatListModule,
         MatSidenavModule,
         MatToolbarModule        
-      ],
-      declarations: [
-        AppComponent
       ],
       providers: [
         {

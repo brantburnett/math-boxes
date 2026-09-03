@@ -8,7 +8,7 @@ describe('DecimalGridComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DecimalGridComponent ]
+      imports: [ DecimalGridComponent ]
     })
     .compileComponents();
   }));

@@ -8,7 +8,7 @@ describe('PyroComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PyroComponent ]
+      imports: [ PyroComponent ]
     })
     .compileComponents();
   }));
