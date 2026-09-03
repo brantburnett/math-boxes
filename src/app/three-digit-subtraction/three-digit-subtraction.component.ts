@@ -2,12 +2,16 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ProblemTypeComponent } from '../problem-type.component';
 import { randomInteger } from '../helpers/random';
 import { BehaviorSubject, delay, delayWhen, interval, map, Observable, of, startWith, switchMap } from 'rxjs';
+import { MatFormField, MatInput } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
+import { PyroComponent } from '../pyro/pyro.component';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-three-digit-subtraction',
     templateUrl: './three-digit-subtraction.component.html',
     styleUrls: ['./three-digit-subtraction.component.scss'],
-    standalone: false
+    imports: [MatFormField, MatInput, MatButton, PyroComponent, AsyncPipe]
 })
 export class ThreeDigitSubtractionComponent extends ProblemTypeComponent implements OnInit {
 

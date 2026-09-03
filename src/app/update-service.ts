@@ -1,4 +1,4 @@
-import { Injectable, OnDestroy } from "@angular/core";
+import { Injectable, OnDestroy, inject } from "@angular/core";
 import { SwUpdate } from "@angular/service-worker";
 import { interval, Subscription } from "rxjs";
 
@@ -6,11 +6,10 @@ import { interval, Subscription } from "rxjs";
   providedIn: 'root'
 })
 export class UpdateService implements OnDestroy {
+  private updates = inject(SwUpdate);
+
   private updateSubscription?: Subscription;
   private availableSubscription?: Subscription;
-
-  constructor(private updates: SwUpdate) {
-  }
 
   public checkForUpdates(): void {
     if (this.updates.isEnabled) {

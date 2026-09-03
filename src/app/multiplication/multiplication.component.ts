@@ -1,12 +1,16 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ProblemTypeComponent } from '../problem-type.component';
 import { DecimalGridSetComponent } from '../decimal-grid-set/decimal-grid-set.component';
+import { MatFormField, MatInput } from '@angular/material/input';
+import { EmojiSelectorComponent } from '../emoji-selector/emoji-selector.component';
+import { MatButton } from '@angular/material/button';
+import { PyroComponent } from '../pyro/pyro.component';
 
 @Component({
     selector: 'app-multiplication',
     templateUrl: './multiplication.component.html',
     styleUrls: ['./multiplication.component.scss'],
-    standalone: false
+    imports: [MatFormField, MatInput, EmojiSelectorComponent, DecimalGridSetComponent, MatButton, PyroComponent]
 })
 export class MultiplicationComponent extends ProblemTypeComponent implements OnInit {
 

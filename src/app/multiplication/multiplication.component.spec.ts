@@ -16,8 +16,11 @@ describe('MultiplicationComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MultiplicationComponent, DecimalGridSetComponent, DecimalGridComponent, EmojiSelectorComponent ],
       imports: [
+        MultiplicationComponent,
+        DecimalGridSetComponent,
+        DecimalGridComponent,
+        EmojiSelectorComponent,
         NoopAnimationsModule,
         MatButtonModule,
         MatButtonToggleModule,
